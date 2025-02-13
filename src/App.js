@@ -8,9 +8,8 @@ import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import { red } from "@mui/material/colors";
+import AutoModeIcon from "@mui/icons-material/AutoMode";
 
 export default function MediaControlCard() {
   const theme = useTheme();
@@ -30,29 +29,29 @@ export default function MediaControlCard() {
     {
       author: "Albert Einstein",
       quote: "Cada día sabemos más y entendemos menos",
-      img: "https://culturizando.com/wp-content/uploads/2019/01/Albert-Einstein-y-su-viaje-a-California.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
     },
     {
       author: "Steve Jobs",
       quote: "La innovación distingue a los líderes de los seguidores",
-      img: "https://commons.wikimedia.org/wiki/File:Steve_Jobs_Headshot_2010-CROP.jpg",
+      img: "https://i.blogs.es/de3e88/steve-jobs/450_1000.webp",
     },
     {
       author: "Nelson Mandela",
       quote: "La educación es el arma más poderosa para cambiar el mundo",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Nelson_Mandela-2008_%28edit%29.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/7/78/Nelson_Mandela_1994_%282%29.jpg",
     },
     {
       author: "Albert Einstein",
       quote:
         "Dar el ejemplo no es la principal manera de influir sobre los demás; es la única manera",
-      img: "https://albert.ias.edu/files/original/778348b9-9634-4b64-8967-b5f04cd433bd.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
     },
     {
       author: "Bob Marley",
       quote:
         "Nunca sabes lo fuerte que eres, hasta que ser fuerte es la única opción que te queda",
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bob_Marley_in_Concert_Zurich_05-30-80.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bob_Marley_1976_press_photo.jpg",
     },
     {
       author: "Albert Einstein",
@@ -64,19 +63,19 @@ export default function MediaControlCard() {
       author: "Fiódor Dostoievski",
       quote:
         "El secreto de la existencia humana no solo está en vivir, sino también en saber para qué se vive",
-      img: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Dostoevsky_1876.jpg",
+      img: "https://historia.nationalgeographic.com.es/medio/2021/11/05/retrato-del-escritor-ruso-fiodor-dostoievski-realizado-en-1876_ca5664cf_475x599.jpeg",
     },
     {
       author: "Teresa de Calcuta",
       quote:
         "Pasamos mucho tiempo ganándonos la vida, pero no el suficiente tiempo viviéndola",
-      img: "https://upload.wikimedia.org/wikipedia/commons/d/df/Mother_Teresa_1.jpg",
+      img: "https://www.biografiasyvidas.com/biografia/t/fotos/teresa_de_calcuta.jpg",
     },
     {
       author: "Stephen Hawking",
       quote:
         "Incluso la gente que afirma que no podemos hacer nada para cambiar nuestro destino, mira antes de cruzar la calle",
-      img: "https://cnnespanol.cnn.com/wp-content/uploads/2018/03/stephen-hawking-2.jpg",
+      img: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/05/01/21/stephen-hawking.jpg?width=1200",
     },
     {
       author: "Friedrich Nietzsche",
@@ -87,17 +86,17 @@ export default function MediaControlCard() {
       author: "Mark Zuckerberg",
       quote:
         "Los éxitos más importantes se consiguen cuando existe la posibilidad de fracasar",
-      img: "https://observer.com/wp-content/uploads/sites/2/2019/04/mark-zuckerberg.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
     },
     {
       author: "Larry Page",
       quote: "Siempre da más de que lo esperan de ti",
-      img: "https://www.topmost10.com/wp-content/uploads/2020/01/Larry-Page.jpg",
+      img: "https://assets-us-01.kc-usercontent.com/5cb25086-82d2-4c89-94f0-8450813a0fd3/9da25564-a085-4df4-853e-963ecc6051cd/Larry_Page.jpg?fm=jpg&auto=format",
     },
     {
       author: "Walt Disney",
       quote: "La forma de empezar es dejar de hablar y empezar a actuar",
-      img: "https://www.history.com/.image/t_share/MTU3ODc4NjAzOTYxMjkzOTAy/walt-disney.jpg",
+      img: "https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_1946.JPG",
     },
   ];
 
@@ -142,44 +141,41 @@ export default function MediaControlCard() {
           "radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%))",
         boxShadow:
           "hsla(220, 30%, 5%, 0.05) 0px 5px 15px 0px, hsla(220, 25%, 10%, 0.05) 0px 15px 35px -5px",
+        p: 6,
+        mt: 8,
+        mx: 6,
+        borderRadius: 4,
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" variant="h3">
+          <Typography
+            component="div"
+            variant="h4"
+            sx={{ fontFamily: "Poppins, sans-serif", fontWeight: 500, mr: 2 }}
+          >
             {quotes[index].quote}
           </Typography>
           <Typography
             variant="subtitle1"
             component="div"
-            sx={{ color: "text.secondary" }}
+            sx={{ color: "text.secondary", fontFamily: "Poppins, sans-serif" }}
           >
             {quotes[index].author}
           </Typography>
         </CardContent>
         <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-          <IconButton aria-label="previous" onClick={handlePrevious}>
-            {theme.direction === "rtl" ? (
-              <SkipNextIcon />
-            ) : (
-              <SkipPreviousIcon />
-            )}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-          </IconButton>
-          <IconButton aria-label="next" onClick={handleNext}>
-            {theme.direction === "rtl" ? (
-              <SkipPreviousIcon />
-            ) : (
-              <SkipNextIcon />
-            )}
+          <IconButton aria-label="newQuote" onClick={getRandomIndex}>
+            <AutoModeIcon sx={{ height: 38, width: 38, color: "skyblue" }} />
+            <Typography variant="body1" sx={{ mx: 1, color: "skyblue" }}>
+              New Quote
+            </Typography>{" "}
           </IconButton>
         </Box>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 151, borderRadius: 3 }}
         image={quotes[index].img}
         alt={quotes[index].author}
       />
